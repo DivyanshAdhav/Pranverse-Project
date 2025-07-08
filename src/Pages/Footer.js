@@ -1,5 +1,7 @@
-import React from "react";
-import "./Footer.css";
+
+import React from 'react';
+import './Footer.css';
+import { FaYoutube, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -11,18 +13,19 @@ function Footer() {
           <a href="#" className="text-light ms-2">Privacy</a>
         </div>
 
-        <div className="footer-right d-flex">
-          {[...Array(1)].map((_, i) => (
-            <div className="footer-column mx-3" key={i}>
-              <h5 className="text-uppercase">Company</h5>
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-light">About Us</a></li>
-                <li><a href="#" className="text-light">Meet The Team</a></li>
-                <li><a href="#" className="text-light">What We Do</a></li>
-                <li><a href="#" className="text-light">Careers</a></li>
-              </ul>
-            </div>
-          ))}
+        <div className="footer-right d-flex flex-column">
+          <h5>Follow Us</h5>
+          <div className="d-flex">
+            <a href="https://www.youtube.com/@pranverse2808?feature=shared" target="_blank" rel="noreferrer" className="text-light me-3">
+              <FaYoutube size={30} />
+            </a>
+            <a href="https://www.linkedin.com/in/goodbyestress" target="_blank" rel="noreferrer" className="text-light me-3">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://www.facebook.com/share/15PuCntnxi/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="text-light">
+              <FaFacebook size={30} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

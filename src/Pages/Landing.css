@@ -1,0 +1,52 @@
+/* Hero Section */
+.hero-banner {
+  background: linear-gradient(145deg, #874CCC, #6e35b8);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Purple text */
+.text-purple {
+  color: #874CCC !important;
+}
+
+/* Course Cards */
+.course-card {
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(135, 76, 204, 0.2);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
+  }
+
+  .text-purple {
+    font-size: 1.25rem;
+  }
+
+  .course-card {
+    margin-bottom: 20px;
+  }
+
+  .hero-banner {
+    padding: 60px 15px;
+  }
+}
