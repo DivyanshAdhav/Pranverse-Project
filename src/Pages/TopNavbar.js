@@ -45,12 +45,12 @@ function TopNavbar() {
               <Nav.Link as={Link} to="/about">About Us</Nav.Link>
               <Nav.Link as={Link} to="/courses">Courses</Nav.Link>
               <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
-              <NavDropdown title="Services" id="navbarScrollingDropdown">
+              {/* <NavDropdown title="Services" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#astrology">Astrology</NavDropdown.Item>
                 <NavDropdown.Item href="#reiki">Reiki</NavDropdown.Item>
                 <NavDropdown.Item href="#vastu">Vastu</NavDropdown.Item>
                 <NavDropdown.Item href="#yantras">Divine Yantras</NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
             <Button variant="outline-primary" onClick={handleShow}>
               Login / Register

@@ -1,52 +1,125 @@
-/* Hero Section */
-.hero-banner {
-  background: linear-gradient(145deg, #874CCC, #6e35b8);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
+/* Landing.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFF8F3;
 }
 
-/* Purple text */
 .text-purple {
-  color: #874CCC !important;
+  color: #874CCC;
 }
 
-/* Course Cards */
-.course-card {
-  border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero-banner {
+  background-color: #FFB7B2; /* soft pink pastel */
+  background-size: cover;
+  color: white;
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(135, 76, 204, 0.2);
+.hero-banner h1,
+.hero-banner p {
+  color: white;
 }
 
-/* Testimonial Cards */
-.testimonial-card {
-  background-color: #fff;
-  border-radius: 16px;
+.btn-primary {
+  background-color: #874CCC;
+  border: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-banner h1 {
-    font-size: 1.8rem;
-  }
+.btn-primary:hover {
+  background-color: #6c3eb7;
+}
 
-  .hero-banner p {
-    font-size: 1rem;
-  }
+.btn-outline-success {
+  border-color: #B5EAD7;
+  color: #4E937A;
+}
 
-  .text-purple {
-    font-size: 1.25rem;
-  }
+.btn-outline-success:hover {
+  background-color: #B5EAD7;
+  color: white;
+}
 
-  .course-card {
-    margin-bottom: 20px;
-  }
+.card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
 
-  .hero-banner {
-    padding: 60px 15px;
-  }
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #FF6AA2;
+}
+
+.card-body p,
+.card-text {
+  color: #444;
+}
+
+footer.bg-purple {
+  background-color: #874CCC;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FFD1DC;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: none;
+  background-color: #874CCC;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.modal-title {
+  color: #874CCC;
+}
+
+.accordion-button {
+  background-color: #FFDAC1;
+  color: #5C3D99;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #FFB7B2;
+  color: #000;
+}
+
+.accordion-body {
+  background-color: #FFF;
+  color: #444;
+}
+
+.blockquote {
+  font-style: italic;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+
+.blockquote::before {
+  content: "“";
+  font-size: 36px;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  color: #FFB7B2;
 }
