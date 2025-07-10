@@ -788,12 +788,24 @@ import { motion } from "framer-motion";
 import { FaWhatsapp, FaFacebook, FaInstagram, FaArrowUp, FaLeaf, FaQuestionCircle } from "react-icons/fa";
 import FounderVideos from "./FounderVideos";
 import './Landing.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 import reikiSession from "../Images/reiki_session.jpg";
 import calmingTouch from "../Images/calming_touch.jpg";
 import energyTransmission from "../Images/energy_transmission.jpg";
 import meditationImage from "../Images/meditation.jpeg";
 import lifeProblems from "../Images/life_problem.jpeg";
+import testimonial1 from "../Images/testimonials/testimonial-1.jpeg";
+import testimonial2 from "../Images/testimonials/testimonial-2.jpeg";
+import testimonial3 from "../Images/testimonials/testimonial-3.jpeg";
+import testimonial4 from "../Images/testimonials/testimonial-4.jpeg";
+import testimonial5 from "../Images/testimonials/testimonial-5.jpeg";
+import testimonial6 from "../Images/testimonials/testimonial-6.jpeg";
+import testimonial7 from "../Images/testimonials/testimonial-7.jpeg";
+import testimonial8 from "../Images/testimonials/testimonial-8.jpeg";
 
 const Landing = () => {
   const [showForm, setShowForm] = useState(false);
@@ -850,6 +862,41 @@ const Landing = () => {
       img: energyTransmission,
     },
   ];
+
+  const testimonialImages = [
+  require("../Images/testimonials/testimonial-1.jpeg"),
+  require("../Images/testimonials/testimonial-2.jpeg"),
+  require("../Images/testimonials/testimonial-3.jpeg"),
+  require("../Images/testimonials/testimonial-4.jpeg"),
+  require("../Images/testimonials/testimonial-5.jpeg"),
+  require("../Images/testimonials/testimonial-6.jpeg"),
+  require("../Images/testimonials/testimonial-7.jpeg"),
+  require("../Images/testimonials/testimonial-8.jpeg"),
+];
+
+const sliderSettings = {
+  dots: false,
+  infinite: true,
+  speed: 2000,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
 
   const consultTopics = [
     { title: "Relationship Issues", icon: "💔" },
@@ -972,7 +1019,7 @@ const Landing = () => {
         </Container>
       </motion.section>
 
-       <motion.section className="py-5 bg-light" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+       {/* <motion.section className="py-5 bg-light" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
          <Container>
            <h2 className="text-center text-purple mb-4">✨ Testimonials</h2>
            <Row>
@@ -991,7 +1038,29 @@ const Landing = () => {
               ))}
           </Row>
         </Container>
-      </motion.section>
+      </motion.section> */}
+
+   <motion.section className="py-5 bg-light" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+  <Container>
+    <h2 className="text-center text-purple mb-4">✨ Testimonials</h2>
+    <Slider {...sliderSettings}>
+      {testimonialImages.map((image, index) => (
+        <div key={index} style={{ padding: "0 10px" }}>
+          <img
+            src={image}
+            alt={`Testimonial ${index + 1}`}
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "10px",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+            }}
+          />
+        </div>
+      ))}
+    </Slider>
+  </Container>
+</motion.section>
 
       {/* FAQs */}
       <motion.section className="py-5" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
